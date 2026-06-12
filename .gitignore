@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual env
+venv/
+.venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+
+# Environment
+.env
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Mypy
+.mypy_cache/
+
+# Ruff
+.ruff_cache/
+
+# Alembic
+*.db
+
+# Uploads
+uploads/
+
+# OS
+.DS_Store
+Thumbs.db
