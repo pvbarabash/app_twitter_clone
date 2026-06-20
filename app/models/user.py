@@ -1,6 +1,6 @@
 from sqlalchemy import String
-from sqlalchemy.orm import Mapped
-from sqlalchemy.orm import mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
+
 
 from app.core.database import Base
 
@@ -20,4 +20,18 @@ class User(Base):
         String(255),
         unique=True,
         nullable=False
+    )
+
+    follower_relations = relationship(
+        "Follow",
+        foreign_keys="Follow.following_id",
+        back_populates="following",
+        cascade="all, delete-orphan",
+    )
+
+    following_relations = relationship(
+        "Follow",
+        foreign_keys="Follow.follower_id",
+        back_populates="follower",
+        cascade="all, delete-orphan",
     )
