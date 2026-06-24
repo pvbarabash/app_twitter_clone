@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
-class MediaUploadResponse(BaseModel):
+class MediaUploadResponseSchema(BaseModel):
     result: bool = True
     media_id: int
 
